@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,21 +14,43 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/posts/{post}',  function($post){
-    $posts = [
-        'my-first-post' => 'Hello, this is my first blog post!',
-        'my-second-post' => 'Now I am getting the hang of this blogging thing.'
-    ];
+Route::get('/posts/{post}', [WelcomeController::class, 'show']);
 
-    if (!array_key_exists($post, $posts)) {
-        abort(404, 'Sorry, that post was not found.');
-    }
-
-    return view('post', [
-        'post' => $posts[$post]
-    ]);
-});
-
-Route::get('/', function () {
+Route::get('/', function (){
     return view('welcome');
 });
+
+Route::get('/home', function (){
+    return view('welcome');
+});
+
+Route::get('/profile', function (){
+    return view('profile');
+});
+
+Route::get('/dashboard', function (){
+    return view('dashboard');
+});
+
+Route::get('/FAQ', function (){
+    return view('FAQ');
+});
+
+Route::get('/view', function (){
+    return view('view');
+});
+
+Route::get('/motivation', function (){
+    return view('/motivation');
+});
+
+
+
+
+
+
+//Route::get([
+//    '/' => view('welcome'),
+//    '/home' => view('welcome'),
+//    '/profile' => view('profile')
+//]);
