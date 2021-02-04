@@ -1,6 +1,14 @@
 <?php
 
 use App\Http\Controllers\WelcomeController;
+use \App\Http\Controllers\ProfileController;
+use \App\Http\Controllers\DashboardController;
+use \App\Http\Controllers\FAQController;
+use \App\Http\Controllers\ViewController;
+use \App\Http\Controllers\MotivationController;
+
+use \App\Http\Controllers\PostController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,43 +22,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/posts/{post}', [WelcomeController::class, 'show']);
-
-Route::get('/', function (){
-    return view('welcome');
-});
-
-Route::get('/home', function (){
-    return view('welcome');
-});
-
-Route::get('/profile', function (){
-    return view('profile');
-});
-
-Route::get('/dashboard', function (){
-    return view('dashboard');
-});
-
-Route::get('/FAQ', function (){
-    return view('FAQ');
-});
-
-Route::get('/view', function (){
-    return view('view');
-});
-
-Route::get('/motivation', function (){
-    return view('/motivation');
-});
+//Route::get('posts/{post}', [PostController::class, 'show']);
 
 
 
+Route::get('/', [WelcomeController::class, 'returnHomePage']);
 
+Route::get('/home', [WelcomeController::class, 'returnHomePage']);
 
+Route::get('/profile', [ProfileController::class, 'returnProfilePage']);
 
-//Route::get([
-//    '/' => view('welcome'),
-//    '/home' => view('welcome'),
-//    '/profile' => view('profile')
-//]);
+Route::get('/dashboard', [DashboardController::class, 'returnDashboardPage']);
+
+Route::get('/FAQ', [FAQController::class, 'returnFAQPage']);
+
+Route::get('/motivation', [MotivationController::class, 'returnMotivationPage']);
+
+Route::get('/view', [ViewController::class, 'returnViewPage']);
+
