@@ -9,11 +9,11 @@ class PostController extends Controller{
 
     public function show($slug){
 
-        $posts = Post::all();
+//        $posts = Post::all();
 
-        return view('FAQ', [
-            'post' => $posts
-        ]);
+//        return view('FAQ', [
+//            'post' => $posts
+//        ]);
 
     }
 }
