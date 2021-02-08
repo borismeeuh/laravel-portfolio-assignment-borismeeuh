@@ -1,6 +1,6 @@
-<?php require '../resources/views/partials/header.php'; ?>
+@extends('layout')
 
-<body>
+@section('content')
 <div class="container7">
     <div class="infobox">
         <div class="icon"><i class="fa fa-address-book" aria-hidden="true"></i></div>
@@ -127,7 +127,5 @@
     <li>Treyarch. (n.d.) <a href="https://img.pngio.com/treyarch-logo-logodix-treyarch-logo-png-400_400.jpg" target="_blank">https://img.pngio.com/treyarch-logo-logodix-treyarch-logo-png-400_400.jpg</a></li>
 </ul>
 
-<?php require '../resources/views/partials/footer.php'; ?>
-
-</body>
+@endsection
 

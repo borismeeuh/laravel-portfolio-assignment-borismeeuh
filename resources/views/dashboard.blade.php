@@ -1,7 +1,6 @@
-<?php require '../resources/views/partials/header.php'; ?>
+@extends('layout')
 
-<body>
-
+@section('content')
 <h2>
     Relevant links
 </h2>
@@ -188,7 +187,4 @@
 <br>
 <br>
 <br>
-
-<?php require '../resources/views/partials/footer.php'; ?>
-
-</body>
+@endsection

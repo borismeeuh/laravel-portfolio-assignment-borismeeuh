@@ -24,8 +24,6 @@ use Illuminate\Support\Facades\Route;
 
 //Route::get('posts/{post}', [PostController::class, 'show']);
 
-
-
 Route::get('/', [WelcomeController::class, 'returnHomePage']);
 
 Route::get('/home', [WelcomeController::class, 'returnHomePage']);

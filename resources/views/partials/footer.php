@@ -17,3 +17,5 @@
     <div class="footerbottom">
         &copy; Boris Kamstra  |  Hogeschool Zeeland
     </div>
+</div>
+</html>

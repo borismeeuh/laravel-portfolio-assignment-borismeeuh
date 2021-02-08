@@ -1,6 +1,6 @@
-<?php require '../resources/views/partials/header.php'; ?>
+@extends('layout')
 
-<body>
+@section('content')
 <p>
 <h2>Theory</h2>
 
@@ -138,6 +138,4 @@ I don't really care if they think highly of my future job or not.
 <br>
 <br>
 
-<?php require '../resources/views/partials/footer.php'; ?>
-
-</body>
+@endsection

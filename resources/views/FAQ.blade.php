@@ -1,7 +1,6 @@
-<?php require '../resources/views/partials/header.php'; ?>
+@extends('layout')
 
-<body>
-
+@section('content')
 <h2>
     Here you'll find some frequently asked questions about HZ and how things work around here. You'll also
     <br>
@@ -23,6 +22,4 @@
 <br>
 <br>
 
-<?php require '../resources/views/partials/footer.php'; ?>
-
-</body>
+@endsection

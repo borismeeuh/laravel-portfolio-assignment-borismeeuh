@@ -1,23 +1,22 @@
-<?php require '../resources/views/partials/header.php'; ?>
+@extends('layout')
 
-<body>
-
+@section('content')
 <p>
     <h2>
         Short Summary
     </h2>
-    <br>
+<br>
 
-    I was born in Rotterdam and lived in Berkel en Roderijs for the first 2.5 years of my life. My parents decided to move to a more laid
-    back part of the Netherlands to raise their children. Like I said on the introduction page, I'm from a small village named Stellendam.
-    I've lived here eversince my parents decided to move. I actually prefer a small town like Stellendam over a 'big' city like Rotterdam,
-    so I think in the future I'll keep living in a small town.
+I was born in Rotterdam and lived in Berkel en Roderijs for the first 2.5 years of my life. My parents decided to move to a more laid
+back part of the Netherlands to raise their children. Like I said on the introduction page, I'm from a small village named Stellendam.
+I've lived here eversince my parents decided to move. I actually prefer a small town like Stellendam over a 'big' city like Rotterdam,
+so I think in the future I'll keep living in a small town.
 
-    <br>
+<br>
 
-<h2>
-    Spare time activities
-</h2>
+    <h2>
+        Spare time activities
+    </h2>
 
 Eversince I was a little kid, I've really enjoyed riding a skateboard. I've been doing it for about 11 years now. I still  Like
 to practice skateboarding eventhough I don't have as much time as I used to have. I've been practicing judo for roughly 13 years now.
@@ -101,7 +100,6 @@ Youtube videos and occasionally play video games.
 <br>
 <br>
 
-<?php require '../resources/views/partials/footer.php'; ?>
+@endsection
 
-</body>
 
