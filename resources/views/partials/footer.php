@@ -7,6 +7,7 @@
             <li class="footerlink"><a href="FAQ">FAQ</a></li>
             <li class="footerlink"><a href="motivation">My Motivation</a></li>
             <li class="footerlink"><a href="view">View on the job</a></li>
+            <li class="footerlink"><a href="profession">Profession</a></li>
         </ul>
     </div>
     <div class="footercontent">

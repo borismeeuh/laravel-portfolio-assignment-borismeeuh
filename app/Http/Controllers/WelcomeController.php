@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
-    public function returnHomePage(): string
+    public function returnHomePage()
     {
         return view('welcome');
     }

@@ -6,6 +6,8 @@ use \App\Http\Controllers\DashboardController;
 use \App\Http\Controllers\FAQController;
 use \App\Http\Controllers\ViewController;
 use \App\Http\Controllers\MotivationController;
+use \App\Http\Controllers\ProfessionController;
+use \App\Http\Controllers\ArticleController;
 
 use \App\Http\Controllers\PostController;
 
@@ -37,4 +39,17 @@ Route::get('/FAQ', [FAQController::class, 'returnFAQPage']);
 Route::get('/motivation', [MotivationController::class, 'returnMotivationPage']);
 
 Route::get('/view', [ViewController::class, 'returnViewPage']);
+
+Route::get('/profession', function () {
+    return view('profession', [
+        'articles'=> App\Models\Article::take(3)->latest()->get()
+    ]);
+});
+
+Route::get('/articles/{article}', [ArticleController::class, 'show']);
+
+
+
+
+
 
