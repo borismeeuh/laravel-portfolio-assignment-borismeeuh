@@ -6,6 +6,7 @@
     <br>
     find the answers to the questions on this page.
 </h2>
+<h3 style="text-align: center">Click <a href="FAQ/createFaq">here</a> to add your question.</h3>
 <p>
     <br>
 

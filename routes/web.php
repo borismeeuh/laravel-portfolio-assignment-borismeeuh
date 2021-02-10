@@ -34,19 +34,19 @@ Route::get('/profile', [ProfileController::class, 'returnProfilePage']);
 
 Route::get('/dashboard', [DashboardController::class, 'returnDashboardPage']);
 
-Route::get('/FAQ', [FAQController::class, 'returnFAQPage']);
+Route::get('/FAQ', [FAQController::class, 'index']);
+Route::post('/FAQ', [FAQController::class, 'store']);
+Route::get('/FAQ/createFaq', [FAQController::class, 'create']);
 
 Route::get('/motivation', [MotivationController::class, 'returnMotivationPage']);
 
 Route::get('/view', [ViewController::class, 'returnViewPage']);
 
-Route::get('/profession', function () {
-    return view('profession', [
-        'articles'=> App\Models\Article::take(3)->latest()->get()
-    ]);
-});
+Route::get('/profession', [ProfessionController::class, 'index']);
+Route::post('/profession', [ProfessionController::class, 'store']);
+Route::get('/profession/create', [ProfessionController::class, 'create']);
+Route::get('/profession/{profession}', [ProfessionController::class, 'show']);
 
-Route::get('/articles/{article}', [ArticleController::class, 'show']);
 
 
 
