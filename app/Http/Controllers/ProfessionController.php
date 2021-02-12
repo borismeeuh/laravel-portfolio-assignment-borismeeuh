@@ -20,11 +20,13 @@ class ProfessionController extends Controller
         return view('articles.show', ['article' => $article]);
     }
 
-    public function create(){
+    public function create()
+    {
         return view('articles.create');
     }
 
-    public function store(){
+    public function store()
+    {
         $article = new Article();
 
         $article->title = request('title');
@@ -35,15 +37,30 @@ class ProfessionController extends Controller
 
         return redirect('/profession');
     }
-    public function edit(){
 
+    public function edit($id)
+    {
+        $article = Article::findorfail($id);
+        return view('articles.edit', compact('article'));
     }
 
-    public function update(){
+    public function update($id)
+    {
+        $article = Article::findorfail($id);
 
+        $article->title = request('title');
+        $article->excerpt = request('excerpt');
+        $article->body = request('body');
+
+        $article->save();
+
+        return redirect('/profession/'.$article->id);
     }
 
-    public function destroy(){
-
+    public function destroy($id)
+    {
+        Article::findorfail($id)->
+        destroy($id);
+        return redirect('/profession');
     }
 }

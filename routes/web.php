@@ -34,18 +34,27 @@ Route::get('/profile', [ProfileController::class, 'returnProfilePage']);
 
 Route::get('/dashboard', [DashboardController::class, 'returnDashboardPage']);
 
-Route::get('/FAQ', [FAQController::class, 'index']);
-Route::post('/FAQ', [FAQController::class, 'store']);
-Route::get('/FAQ/createFaq', [FAQController::class, 'create']);
+//Route::get('/FAQ', [FAQController::class, 'index']);
+//Route::post('/FAQ', [FAQController::class, 'store']);
+//Route::get('/FAQ/createFaq', [FAQController::class, 'create']);
+//Route::get('/FAQ/{question}/edit', [FAQController::class, 'edit']);
+//Route::put('/FAQ/{question}', [FAQController::class, 'update']);
+//Route::delete('/FAQ/{question}', [FAQController::class, 'destroy']);
 
 Route::get('/motivation', [MotivationController::class, 'returnMotivationPage']);
 
 Route::get('/view', [ViewController::class, 'returnViewPage']);
 
-Route::get('/profession', [ProfessionController::class, 'index']);
-Route::post('/profession', [ProfessionController::class, 'store']);
-Route::get('/profession/create', [ProfessionController::class, 'create']);
-Route::get('/profession/{profession}', [ProfessionController::class, 'show']);
+//Route::get('/profession', [ProfessionController::class, 'index']);
+//Route::post('/profession', [ProfessionController::class, 'store']);
+//Route::get('/profession/create', [ProfessionController::class, 'create']);
+//Route::get('/profession/{profession}', [ProfessionController::class, 'show']);
+//Route::get('/profession/{profession}/edit', [ProfessionController::class, 'edit']);
+//Route::put('/profession/{profession}', [ProfessionController::class, 'update']);
+//Route::delete('/profession/{profession}', [ProfessionController::class, 'destroy']);
+Route::resource('/profession', ProfessionController::class);
+Route::resource('/FAQ', FAQController::class);
+
 
 
 

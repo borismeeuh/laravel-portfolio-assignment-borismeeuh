@@ -15,6 +15,7 @@
     @foreach($posts as $post)
         <li>{{ $post->question }}</li>
         <li>{{ $post->answer }}</li>
+        <button><a href="FAQ/{{ $post->id }}/edit">Edit Question</a></button>
         <br>
     @endforeach
 </ul>
