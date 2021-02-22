@@ -3,12 +3,16 @@
 @section('content')
 
     <h2 style="text-align: center">All articles</h2>
-    <h3 style="text-align: center">Click <a href="profession/create">here</a> to add your article.</h3>
+
+    <form class="secondaryForm", action="profession/create", method="get">
+        <button class="button">Create Question</button>
+    </form>
+
     <ul>
         @foreach($articles as $article)
             <li>
                 <h3>
-                    <a href="/profession/{{$article->id}}">{{$article->title}}</a>
+                    <a href="{{ route('profession.show', $article) }}">{{$article->title}}</a>
                 </h3>
 
                 <p>{{$article->excerpt}}</p>

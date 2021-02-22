@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Article;
 use App\Models\Faq;
 use Illuminate\Http\Request;
+use Symfony\Component\Console\Question\Question;
 
 class FAQController extends Controller
 {
     public function index()
     {
         return view('FAQ', [
-            'posts' => Faq::all()
+            'faqs' => Faq::all()
         ]);
     }
 
@@ -20,38 +20,42 @@ class FAQController extends Controller
 
     }
 
-    public function create(){
+    public function create()
+    {
         return view('faqs.createFaq');
     }
 
-    public function store(){
-        $question = new Faq();
-        $question->question = request('question');
-        $question->answer = request('answer');
-        $question->save();
-
-        return redirect('/FAQ');
-    }
-    public function edit($id)
+    public function store(Request $request)
     {
-        $question = Faq::findorfail($id);
-        return view('faqs.editFaq', compact('question'));
-
+        Faq::create($this->validateQuestion($request));
+        return redirect('/FAQ');
     }
 
-    public function update($id){
-        $question = Faq::findorfail($id);
-
-        $question->question = request('question');
-        $question->answer = request('answer');
-        $question->save();
-
-        return redirect('/FAQ');
-
+    public function edit(Faq $faq)
+    {
+        return view('faqs.editFaq', compact('faq'));
     }
 
-    public function destroy($id){
-        Faq::findorfail($id)->destroy($id);
-        return redirect('/FAQ');
+    public function update(Faq $faq, Request $request)
+    {
+        $faq->update($this->validateQuestion($request));
+        return redirect(route('FAQ'));
+    }
+
+    public function destroy(Faq $faq)
+    {
+        Faq::findorfail($faq->id)->destroy($faq->id);
+        return redirect(route('FAQ'));
+    }
+
+    /**
+     * @return array
+     */
+    public function validateQuestion($request): array
+    {
+        return $request->validate([
+            'question' => 'required',
+            'answer' => 'required'
+        ]);
     }
 }

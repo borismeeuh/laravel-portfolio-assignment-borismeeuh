@@ -12,13 +12,13 @@
             <div class="container">
                 <nav>
                     <ul>
-                        <li><a href="home">Main Page</a></li>
-                        <li><a href="profile">Profile Page</a></li>
-                        <li><a href="dashboard">Dashboard</a></li>
-                        <li><a href="FAQ">FAQ</a></li>
-                        <li><a href="motivation">My Motivation</a></li>
-                        <li><a href="view">View on the job</a></li>
-                        <li><a href="profession">Profession</a></li>
+                        <li><a href="/home">Main Page</a></li>
+                        <li><a href="/profile">Profile Page</a></li>
+                        <li><a href="/dashboard">Dashboard</a></li>
+                        <li><a href="/FAQ">FAQ</a></li>
+                        <li><a href="/motivation">My Motivation</a></li>
+                        <li><a href="/view">View on the job</a></li>
+                        <li><a href="/profession">Profession</a></li>
                     </ul>
                 </nav>
             </div>

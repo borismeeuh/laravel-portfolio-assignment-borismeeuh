@@ -6,16 +6,21 @@
     <br>
     find the answers to the questions on this page.
 </h2>
-<h3 style="text-align: center">Click <a href="FAQ/createFaq">here</a> to add your question.</h3>
+
+<form class="secondaryForm", action="FAQ/create", method="get">
+    <button class="button">Create Question</button>
+</form>
 <p>
     <br>
 
 <ul>
 
-    @foreach($posts as $post)
-        <li>{{ $post->question }}</li>
-        <li>{{ $post->answer }}</li>
-        <button><a href="FAQ/{{ $post->id }}/edit">Edit Question</a></button>
+    @foreach($faqs as $faq)
+        <li>{{ $faq->question }}</li>
+        <li>{{ $faq->answer }}</li>
+        <form method="get", action="FAQ/{{ $faq->id }}/edit">
+            <input class="button" type="submit" value="Edit Question">
+        </form>
         <br>
     @endforeach
 </ul>

@@ -14,10 +14,9 @@ class ProfessionController extends Controller
         ]);
     }
 
-    public function show($id)
+    public function show(Article $profession)
     {
-        $article = Article::find($id);
-        return view('articles.show', ['article' => $article]);
+        return view('articles.show', ['article' => $profession]);
     }
 
     public function create()
@@ -25,42 +24,38 @@ class ProfessionController extends Controller
         return view('articles.create');
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        $article = new Article();
-
-        $article->title = request('title');
-        $article->excerpt = request('excerpt');
-        $article->body = request('body');
-
-        $article->save();
-
-        return redirect('/profession');
+        Article::create($this->validateArticle($request));
+        return redirect(route('profession.index'));
     }
 
-    public function edit($id)
+    public function edit(Article $profession)
     {
-        $article = Article::findorfail($id);
-        return view('articles.edit', compact('article'));
+        return view('articles.edit', compact('profession'));
     }
 
-    public function update($id)
+    public function update(Article $profession, Request $request)
     {
-        $article = Article::findorfail($id);
-
-        $article->title = request('title');
-        $article->excerpt = request('excerpt');
-        $article->body = request('body');
-
-        $article->save();
-
-        return redirect('/profession/'.$article->id);
+        $profession->update($this->validateArticle($request));
+        return redirect(route('profession.show', $profession));
     }
 
-    public function destroy($id)
+    public function destroy(Article $profession)
     {
-        Article::findorfail($id)->
-        destroy($id);
-        return redirect('/profession');
+        Article::findorfail($profession->id)->destroy($profession->id);
+        return redirect(route('profession.index'));
+    }
+
+    /**
+     * @return array
+     */
+    public function validateArticle($request): array
+    {
+        return $request->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+        ]);
     }
 }
