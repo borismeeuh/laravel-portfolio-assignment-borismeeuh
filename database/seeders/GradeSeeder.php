@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Grade;
 use Illuminate\Database\Seeder;
-use App\Models\Article;
 
-class ArticleSeeder extends Seeder
+class GradeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +14,6 @@ class ArticleSeeder extends Seeder
      */
     public function run()
     {
-        Article::factory(20)->create();
+        Grade::factory(10)->create();
     }
 }

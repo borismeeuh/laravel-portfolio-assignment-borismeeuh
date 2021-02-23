@@ -2,10 +2,10 @@
 
 @section('content')
 
-    <h2 style="text-align: center">All articles</h2>
+    <h2 style="text-align: center">All Articles</h2>
 
     <form class="secondaryForm", action="profession/create", method="get">
-        <button class="button">Create Question</button>
+        <button class="button">Create Article</button>
     </form>
 
     <ul>

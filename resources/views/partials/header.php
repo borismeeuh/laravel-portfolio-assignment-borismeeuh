@@ -19,6 +19,7 @@
                         <li><a href="/motivation">My Motivation</a></li>
                         <li><a href="/view">View on the job</a></li>
                         <li><a href="/profession">Profession</a></li>
+                        <li><a href="/grade">Grades</a></li>
                     </ul>
                 </nav>
             </div>

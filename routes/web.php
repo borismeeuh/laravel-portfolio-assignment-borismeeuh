@@ -8,6 +8,7 @@ use \App\Http\Controllers\ViewController;
 use \App\Http\Controllers\MotivationController;
 use \App\Http\Controllers\ProfessionController;
 use \App\Http\Controllers\ArticleController;
+use \App\Http\Controllers\GradeController;
 
 use \App\Http\Controllers\PostController;
 
@@ -40,6 +41,7 @@ Route::get('/view', [ViewController::class, 'returnViewPage']);
 
 Route::resource('/profession', ProfessionController::class);
 Route::resource('/FAQ', FAQController::class);
+Route::resource('/grade', GradeController::class);
 
 
 

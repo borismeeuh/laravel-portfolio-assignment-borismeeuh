@@ -38,14 +38,16 @@ class FAQController extends Controller
 
     public function update(Faq $faq, Request $request)
     {
+        dd('update');
         $faq->update($this->validateQuestion($request));
-        return redirect(route('FAQ'));
+        return redirect(route('faq.index', $faq));
     }
 
     public function destroy(Faq $faq)
     {
+        dd('destroy');
         Faq::findorfail($faq->id)->destroy($faq->id);
-        return redirect(route('FAQ'));
+        return redirect(route('faq.index'));
     }
 
     /**

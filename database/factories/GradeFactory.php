@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Grade;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class GradeFactory extends Factory
 {
@@ -22,7 +23,11 @@ class GradeFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'course_name' => $this->faker->text,
+            'test_type' => $this->faker->text,
+            'lowest_passing_grade' => 5.5,
+            'best_grade' => $this->faker->numberBetween(0, 10),
+            'passed_at' => now()
         ];
     }
 }

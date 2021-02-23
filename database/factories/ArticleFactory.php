@@ -4,7 +4,6 @@ namespace Database\Factories;
 
 use App\Models\Article;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Psy\Util\Str;
 
 class ArticleFactory extends Factory
 {
@@ -25,7 +24,7 @@ class ArticleFactory extends Factory
         return [
             'title' => $this->faker->name,
             'excerpt' => $this->faker->text,
-            'body' => $this->faker->text
+            'body' => $this->faker->realText(199)
         ];
     }
 }
