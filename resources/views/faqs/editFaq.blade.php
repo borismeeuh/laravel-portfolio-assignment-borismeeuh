@@ -4,7 +4,7 @@
 
     <div>
         <div id="faqPage" class="faqContainer">
-            <h1>Update Question</h1>
+            <h1>Change Question</h1>
 
             <form method="POST", action="/FAQ/{{$faq->id}}" class="form">
                 @csrf

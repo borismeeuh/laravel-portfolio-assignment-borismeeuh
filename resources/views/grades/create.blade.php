@@ -5,17 +5,18 @@
     <div id="wrapper" style="">
         <div id="page" class="articleContainer">
             <h1>New Grade</h1>
+            <h3>Fields with an * are required</h3>
 
             <form method="post", action="/grade", class="form">
                 @csrf
 
                 <div class="field">
-                    <label class="title">Course Name</label><br>
+                    <label class="title">* Course Name - Alphabetic and Numeric characters</label><br>
                     <div class="control">
                         <input type="text"
                                id="course_name"
                                name="course_name"
-                               class="input"
+                               class="input @error('course_name') inputError @enderror"
                                value="{{ old('course_name') }}"
                                required><br>
 
@@ -26,12 +27,12 @@
                 </div>
 
                 <div class="field">
-                    <label for="test type">Test Type</label><br>
+                    <label for="test type">* Test Type - Alphabetic characters only</label><br>
                     <div class="control">
                         <input type="text"
                                id="test_type"
                                name="test_type"
-                               class="input"
+                               class="input @error('test_type') inputError @enderror"
                                value="{{ old('test_type') }}"
                                required><br>
 
@@ -42,12 +43,12 @@
                 </div>
 
                 <div class="field">
-                    <label class="title">Best Grade</label><br>
+                    <label class="title">* Best Grade - Must be a number between 1 - 10</label><br>
                     <div class="control">
                         <input type="text"
                                id="best_grade"
                                name="best_grade"
-                               class="input"
+                               class="input @error('best_grade') inputError @enderror"
                                value="{{ old('best_grade') }}"
                                required><br>
 

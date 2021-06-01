@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
+use App\Models\Grade;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
     public function returnDashboardPage(): string
     {
-        return view('dashboard');
+        $course = Course::all();
+        return view('dashboard', [
+            'courses' => $course
+        ]);
     }
 }

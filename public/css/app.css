@@ -1,8 +1,9 @@
 body {
+    color: var(--font-color);
     margin: 0px;
     padding: 0px;
     background-image:
-        linear-gradient(to bottom, rgba(247, 247, 247, 0.7), rgba(255, 255, 255, 0.7)),
+        var(--background-primary),
         url(https://i.pinimg.com/originals/c5/8f/38/c58f38888f4ba5ecb9b0f9bc3dca96ec.jpg);
     font-family:'Roboto', sans-serif;
     background-attachment: fixed;
@@ -27,7 +28,7 @@ h1 {
 
 #background_container{
     width: 100%;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9));
+    background: var(--header-background);
     height: 100px;
 }
 
@@ -62,14 +63,14 @@ nav li {
 }
 
 nav a {
-    color: rgb(0, 0, 0);
+    color: var(--header-font);
     text-transform: uppercase;
     text-decoration: none;
     font-size: 20px;
 }
 
 nav a:hover {
-    color: snow;
+    color: var(--header-font-hover);
 }
 
 nav a::before {
@@ -90,7 +91,7 @@ nav a:hover::before {
     width: 100%;
 }
 
-/*slideshow*/
+/*SLIDESHOW*/
 
 .slidershow{
     width: 350px;
@@ -168,7 +169,7 @@ input[name="r"]{
     margin-left: -80%;
 }
 
-/*tabel*/
+/*TABLE*/
 
 #t01{
     width: 90%;
@@ -192,7 +193,7 @@ ul a{
     text-decoration: none;
 }
 
-/*grafiek*/
+/*GRAPH*/
 
 #curve_chart{
     width: 900px;
@@ -300,7 +301,7 @@ span{
 .container4{
     height: 425px;
     width: 750px;
-    position: absolute;
+    position: relative;
     top: 105%;
     left: 48%;
     background-color: rgba(0, 0, 0, 0.7);
@@ -378,8 +379,7 @@ span{
 
 /*footer*/
 .footer{
-    background: rgba(255, 255, 255, 0.92);
-    color: black;
+    background: var(--footer-background);
     height: 350px;
     width: 1519px;
     position: relative;
@@ -451,8 +451,7 @@ span{
     transition: all ease-in 0.2s;
 }
 #photo1:hover{
-    width: 210px;
-    height: 210px;
+    transform: scale(1.1);
 }
 
 #photo2{
@@ -523,6 +522,13 @@ span{
     height: 30px;
     margin: 3px;
     border-radius: 25px;
+    transition-duration: 0.15s;
+}
+
+.button:hover{
+    background: white;
+    color: black;
+    transform: scale(1.1);
 }
 
 .button:focus{
@@ -549,8 +555,87 @@ span{
     outline: none;
 }
 
+.inputError{
+    border-color: red;
+    background: white;
+    color: black;
+}
+
 .secondaryForm{
     position: relative;
     left: 44%;
-    width: 100%;
+}
+
+/*Error pages*/
+/*404*/
+ #notFoundPage{
+    text-align: center;
+    font-size: x-large;
+}
+
+ .errorLink{
+     text-decoration: none;
+     color: aliceblue;
+ }
+
+ .errorLink:hover{
+     text-decoration: underline;
+ }
+
+ .errorLink:active{
+     text-decoration: underline;
+ }
+
+/*500*/
+#serversideFailure{
+    text-align: center;
+    font-size: x-large;
+}
+
+.errorLink{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.errorLink:hover{
+    text-decoration: underline;
+}
+
+.errorLink:active{
+    text-decoration: underline;
+}
+
+/*DARKMODE TOGGLE*/
+:root{
+    --background-primary: linear-gradient(to bottom, rgba(247, 247, 247, 0.7), rgba(255, 255, 255, 0.7));
+    --font-color: black;
+    --header-font: black;
+    --header-font-hover: snow;
+    --header-background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9));
+    --footer-background: rgba(255, 255, 255, 0.92);
+}
+
+.darkmode{
+    --background-primary: linear-gradient(to bottom, rgba(5, 5, 5, 0.7), rgba(0, 0, 0, 0.7));
+    --font-color: white;
+    --header-font: white;
+    --header-font-hover: gray;
+    --header-background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+    --footer-background: rgba(50, 50, 50, 0.92);
+}
+
+#darkModeToggleImage{
+    position: absolute;
+    left: 95%;
+    top: 3%;
+    width: 50px;
+    height:50px;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    animation: 2s;
+}
+
+#darkModeToggleImage:hover{
+    transform: scale(1.1);
+    transform: rotate(360deg);
 }

@@ -1,7 +1,6 @@
 @extends('layout')
 
 @section('content')
-    {{--<p>{{ $post->body }}</p>--}}
     <h2>
         General introduction
     </h2>

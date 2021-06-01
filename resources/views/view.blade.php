@@ -101,7 +101,7 @@
         </a>
 
         <a href="https://www.onyx-cybersecurity.com/" target="_blank" style="color: rgba(240, 248, 255, 0);">
-            <img src="https://www.wijhelpenziekenhuizen.nl/assets/images/logos/onyx.png" alt="Onyx Cybersecurity" id="photo3">
+            <img src="https://d33wubrfki0l68.cloudfront.net/d13cf393df4a29dfdc39551e854b0580f67385ff/60185/img/external-logos/whz/onyx.png" alt="Onyx Cybersecurity" id="photo3">
         </a>
         <a href="https://mentormate.com/" target="_blank" style="color: rgba(240, 248, 255, 0);">
             <img src="https://res-4.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/v1498159956/x7yiugu2x9bgm2y7xag0.jpg" alt="Mentormate" id="photo4">

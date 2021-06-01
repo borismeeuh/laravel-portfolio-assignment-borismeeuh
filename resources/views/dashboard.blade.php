@@ -14,7 +14,7 @@
     <li><a href="https://www.w3schools.com/html/html_basic.asp" target="_blank">Basic HTML codes</a></li>
     <li><a href="https://itp.hz.nl" target="_blank">IT Personality generator</a></li>
 </ul>
-
+<br>
 
 <table id="t01">
 
@@ -73,7 +73,7 @@
         <td rowspan="2">Framework Project 1</td>
         <td rowspan="2">5</td>
         <td>Portfolio exam 1</td>
-        <td></td>
+        <td>7.4</td>
     </tr>
 
     <tr>
@@ -85,14 +85,14 @@
         <td>Framework Development 1</td>
         <td>5</td>
         <td>Case Study</td>
-        <td></td>
+        <td>7.2</td>
     </tr>
 
     <tr>
         <td>Professional Working Environment</td>
         <td>2.5</td>
         <td>Assesment</td>
-        <td></td>
+        <td>8.7</td>
     </tr>
 
     <tr>
@@ -163,11 +163,11 @@
             ['Jan',  27.5,      45, 60],
             ['Feb',  27.5,      45, 60],
             ['Mar',  27.5,      45, 60],
-            ['Apr',  27.5,      45, 60],
-            ['May',  27.5,      45, 60],
-            ['Jun',  27.5,      45, 60],
-            ['Jul',  27.5,      45, 60],
-            ['Aug',  27.5,      45, 60],
+            ['Apr',  32.5,      45, 60],
+            ['May',  32.5,      45, 60],
+            ['Jun',  37.5,      45, 60],
+            ['Jul',  37.5,      45, 60],
+            ['Aug',  37.5,      45, 60],
         ]);
 
         var options = {

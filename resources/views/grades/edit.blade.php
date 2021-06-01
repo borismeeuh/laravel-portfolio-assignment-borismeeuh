@@ -4,7 +4,7 @@
 
     <div id="wrapper" style="">
         <div id="page" class="articleContainer">
-            <h1>New Grade</h1>
+            <h1>Edit Grade</h1>
 
             <form method="post", action="/grade/{{ $grade->id }}", class="form">
                 @csrf
@@ -16,7 +16,7 @@
                         <input type="text"
                                id="course_name"
                                name="course_name"
-                               class="input"
+                               class="input @error('course_name') inputError @enderror"
                                value="{{ $grade->course_name }}"
                                required><br>
 
@@ -32,7 +32,7 @@
                         <input type="text"
                                id="test_type"
                                name="test_type"
-                               class="input"
+                               class="input @error('test_type') inputError @enderror"
                                value="{{ $grade->test_type }}"
                                required><br>
 
@@ -48,7 +48,7 @@
                         <input type="text"
                                id="best_grade"
                                name="best_grade"
-                               class="input"
+                               class="input @error('best_grade') inputError @enderror"
                                value="{{ $grade->best_grade}}"
                                required><br>
 

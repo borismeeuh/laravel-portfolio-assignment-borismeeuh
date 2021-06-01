@@ -34,6 +34,7 @@ class GradeController extends Controller
     {
         return view('grades.edit', compact('grade'));
     }
+
     public function update(Grade $grade, Request $request)
     {
         $grade->update($this->validateGrade($request));
@@ -52,8 +53,8 @@ class GradeController extends Controller
     public function validateGrade($request): array
     {
         return $request->validate([
-            'course_name' => 'required',
-            'test_type' => 'required',
+            'course_name' => 'required|alpha_num|unique:grades|max:255',
+            'test_type' => 'required|alpha|max:255',
             'best_grade' => 'required|numeric|min:0|max:10'
         ]);
     }

@@ -15,7 +15,7 @@
                 <input type="text"
                        id="title"
                        name="title"
-                       class="input"
+                       class="input @error('course_name') inputError @enderror"
                        value="{{ old('title') }}"><br>
 
                     @if ($errors->has('title'))
@@ -30,7 +30,7 @@
                 <input type="text"
                        id="excerpt"
                        name="excerpt"
-                       class="input"
+                       class="input @error('course_name') inputError @enderror"
                        value="{{ old('excerpt') }}"><br>
 
                     @if ($errors->has('excerpt'))
@@ -45,7 +45,7 @@
                 <input type="text"
                        id="body"
                        name="body"
-                       class="input"
+                       class="input @error('course_name') inputError @enderror"
                        value="{{ old('body') }}"><br><br>
 
                     @if ($errors->has('body'))

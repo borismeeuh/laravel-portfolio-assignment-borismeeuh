@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <header>
+    <header id="header">
         <div id="background_container">
             <div class="container">
                 <nav>
@@ -23,6 +23,9 @@
                     </ul>
                 </nav>
             </div>
+        </div>
+        <div id="darkModeToggle">
+            <img src="images/moon.png" id="darkModeToggleImage">
         </div>
     </header>
 </head>

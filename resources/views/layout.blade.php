@@ -1,8 +1,8 @@
-<?php require '../resources/views/partials/header.php'; ?>
+<?php require '../resources/views/partials/header.blade.php'; ?>
 <body>
 @yield('content')
 </body>
-<?php require '../resources/views/partials/footer.php'; ?>
+<?php require '../resources/views/partials/footer.blade.php'; ?>
 
 
 

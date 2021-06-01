@@ -11,7 +11,7 @@ First of all, what does motivation mean? The Cambridge Dictionary defines it as 
 a clear, straight forward way the explain the meaning of 'motivation'. Motivation is the reason or motive as to why you are doing something.
 <br>
 There are several important types of motivation that make me want to complete this course. Firstly, there is competence motivation. I want to keep getting
-better at coding for example. In addition, I want to prove to myself that I able to succesfully complete an HBO course. Secondly, I want to be able to
+better at coding for example. In addition, I want to prove to myself that I able to successfully complete an HBO course. Secondly, I want to be able to
 sustain myself and my possible family later on in life. This means, that I'll have to get a good job to earn a good living. In order to obtain such a job, i'll
 have to get a diploma. Thirdly, there is the financial motivation. There are opportunities in the IT field, that there may as well be infinite. There are plenty
 of job opportunities and each job has a plethora of ways to climb the social ladder and make more money.
@@ -33,7 +33,7 @@ rewards like money or praise.
 There are other sub-categories of motivation too. These include, but are not limited to:
 
 <ul style="list-style: circle;">
-    <li>Achievement motivation - Here, the achievement is the primairy goal, not the reward</li>
+    <li>Achievement motivation - Here, the achievement is the primary goal, not the reward</li>
     <li>Competence motivation - This type of motivation could mean someone wants to develop a certain skill really well.</li>
     <li>Power motivation - Here, people are motivated by the will to influence other people.</li>
 </ul>
@@ -56,10 +56,10 @@ told to work at something, they can work on whatever they want in both a creativ
 
     The results of the test were a mixed bag to me. The intrinsically
     motivated part was as expected. If I like to do certain for school
-    or work for example, even if it's aditional, I'll do said thing.
+    or work for example, even if it's additional, I'll do said thing.
     A good example for school would be the fact that I did both MUN and
     an internship. You had to do at least one of the two. Doing both was
-    not required but I ended up doing both MUN and an intership anyway.
+    not required but I ended up doing both MUN and an internship anyway.
     <br>
     <br>
     The 40% you're obviously lying' was quite a surprise to me. I'm not
