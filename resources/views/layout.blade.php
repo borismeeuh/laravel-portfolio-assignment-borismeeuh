@@ -31,8 +31,15 @@
                     <a href="/register" id="registerLink">Register</a>
                 </div>
 
+{{--                <div id="loginDiv">--}}
+{{--                    <a href="/login" id="loginLink">Login</a>--}}
+{{--                </div>--}}
+
                 <div id="loginDiv">
-                    <a href="/login" id="loginLink">Login</a>
+                    <form method="GET" action="/login">
+                        @csrf
+                        <button type="submit">Login</button>
+                    </form>
                 </div>
 
                 <div id="logoutDiv">
