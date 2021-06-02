@@ -18,9 +18,13 @@ if (matched) {
         toggleImage.src = "images/moon.png";
         document.body.classList.remove("darkmode");
     }
-} else {
+} else if (!matched) {
     toggleImage.src = "images/moon.png";
     document.body.classList.remove("darkmode");
+    if (localData == "dark"){
+        toggleImage.src = "images/sun.png";
+        document.body.classList.add("darkmode");
+    }
 }
 
 //Adds functionality to the moon/sun icon

@@ -29,9 +29,9 @@ Route::get('/', [WelcomeController::class, 'returnHomePage']);
 
 Route::get('/home', [WelcomeController::class, 'returnHomePage']);
 
-Route::get('/profile', [ProfileController::class, 'returnProfilePage']);
+Route::get('/profile', [ProfileController::class, 'returnProfilePage'])->middleware(['auth']);
 
-Route::get('/dashboard', [DashboardController::class, 'returnDashboardPage']);
+Route::get('/dashboard', [DashboardController::class, 'returnDashboardPage'])->name("dashboard");
 
 Route::get('/motivation', [MotivationController::class, 'returnMotivationPage']);
 
@@ -41,4 +41,6 @@ Route::resource('/profession', ProfessionController::class);
 
 Route::resource('/FAQ', FAQController::class);
 
-Route::resource('/grade', GradeController::class);
+Route::resource('/grade', GradeController::class)->middleware(['auth']);
+
+require __DIR__.'/auth.php';

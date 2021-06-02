@@ -1,9 +1,11 @@
 @extends('layout')
 
 @section('content')
-<h2>
-    Relevant links
-</h2>
+<h1>
+    <strong>
+        Relevant links
+    </strong>
+</h1>
 
 <ul id="list1" style="list-style: circle;">
     <li><a href="https://hz.nl/" target="_blank">HZ home page</a></li>

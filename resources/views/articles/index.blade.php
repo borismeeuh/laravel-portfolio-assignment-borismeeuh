@@ -16,6 +16,9 @@
                 </h3>
 
                 <p>{{$article->excerpt}}</p>
+                <form method="get", action="profession/{{ $article->id }}/edit">
+                    <input class="button" type="submit" value="Edit Article">
+                </form>
                 <p>________________________________________________________</p>
             </li>
         @endforeach

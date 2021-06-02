@@ -11,7 +11,7 @@
                 @csrf
 
                 <div class="field">
-                    <label class="title">* Course Name - Alphabetic and Numeric characters</label><br>
+                    <label class="title">* Course Name - Alphabetic and Numeric characters (No Spaces)</label><br>
                     <div class="control">
                         <input type="text"
                                id="course_name"
