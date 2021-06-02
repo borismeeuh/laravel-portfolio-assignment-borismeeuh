@@ -31,15 +31,8 @@
                     <a href="/register" id="registerLink">Register</a>
                 </div>
 
-{{--                <div id="loginDiv">--}}
-{{--                    <a href="/login" id="loginLink">Login</a>--}}
-{{--                </div>--}}
-
                 <div id="loginDiv">
-                    <form method="GET" action="/login">
-                        @csrf
-                        <button type="submit">Login</button>
-                    </form>
+                    <a href="/login" id="loginLink">Login</a>
                 </div>
 
                 <div id="logoutDiv">

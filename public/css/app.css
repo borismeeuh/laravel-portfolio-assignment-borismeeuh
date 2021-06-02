@@ -32479,6 +32479,7 @@ span{
   height: 350px;
   width: 1519px;
   position: relative;
+  top: 100px;
   padding-top: 12.5px;
 }
 
@@ -32745,6 +32746,7 @@ span{
   transform: rotate(360deg);
 }
 
+/*LOGIN - LOGOUT - REGISTRATION*/
 #registerDiv{
     position: absolute;
     left: 90%;
@@ -32783,6 +32785,82 @@ span{
     color: aliceblue;
     transform: scale(1.1)
 }
+
+/*LOGIN PAGE*/
+.checkboxContainer{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkboxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.checkboxContainer input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkboxContainer input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkboxContainer .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.authenticationButton{
+    position: relative;
+    left: 22.5%;
+    border: 0;
+    background: #343050;
+    color: white;
+    width: 150px;
+    height: 30px;
+    margin: 3px;
+    border-radius: 25px;
+    transition-duration: 0.15s;
+}
+
+.forgotPassword{
+    position: relative;
+    left: 11%;
+    top: 27.5px;
+}
+
+
 
 @media (min-width: 640px) {
   .sm\:container {
