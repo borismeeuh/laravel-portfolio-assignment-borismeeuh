@@ -32743,7 +32743,6 @@ span{
 
 #darkModeToggleImage:hover{
   transform: scale(1.1);
-  transform: rotate(360deg);
 }
 
 /*LOGIN - LOGOUT - REGISTRATION*/

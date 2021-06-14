@@ -632,17 +632,8 @@ span{
     height:50px;
     cursor: pointer;
     transition-duration: 0.1s;
-    animation: 2s;
 }
 
 #darkModeToggleImage:hover{
     transform: scale(1.1);
-    transform: rotate(360deg);
 }
-
-/*#registerAndLogin{*/
-/*    position: absolute;*/
-/*    left: 90%;*/
-/*    top: 3%;*/
-/*    cursor: pointer;*/
-/*}*/
