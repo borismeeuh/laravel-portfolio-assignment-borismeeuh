@@ -2,7 +2,7 @@
 
 @section('content')
     <h2>
-        Nee
+        Introduction
     </h2>
     <p>
         My name is Boris Kamstra. I'm nineteen years old. I'm from Stellendam, a tiny village about an hour north from Middelburg.
